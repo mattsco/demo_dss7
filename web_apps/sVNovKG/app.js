@@ -203,9 +203,9 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .attr("id","input_"+i)
                           .attr("width","20px")
                           .html('<div class="input-group" id="form-'+i+'" ">\
-            <input type="text" class="form-control fixed_width" placeholder="New value..." id="val-"'+i+'">\
+            <input type="text" class="form-control" placeholder="New value..." id="val-"'+i+'">\
             <span class="input-group-btn">\
-            <button type="button" class="btn btn-default fixed_width" id="submit-'+i+'" >Submit</button>\
+            <button type="button" class="btn btn-default" id="submit-'+i+'" >Submit</button>\
             </span></div>');
 
     
