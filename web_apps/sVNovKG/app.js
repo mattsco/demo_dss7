@@ -207,6 +207,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             </form>');
 
         d3.select("#form-"+i).attr("onSubmit", function(){
+            debugger; 
             d3.select("#text-value-sparkline_"+i).text(d3.select("#val-"+i).value); 
         });
     
