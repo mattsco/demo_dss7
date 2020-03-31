@@ -168,14 +168,15 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
         var i = 0;
         d3.select("#tableAccount").append("tr")
                                   .attr("id", "tr_"+i);
-        d3.select("#tr"+i).append("th")
+    
+        d3.select("#tr_"+i).append("th")
                           .attr("scope","row")
                           .text(i);
-    
-        d3.select("#tr"+i).append("td")
+         
+        d3.select("#tr_"+i).append("td")
                           .text(d[i][firstCol]);
     
-        d3.select("#tr"+i).append("td")
+        d3.select("#tr_"+i).append("td")
                           .attr("id","sparkline_"+i);
     
        // sparkline('#sparkline_'+i, data[i]["spark"]);
