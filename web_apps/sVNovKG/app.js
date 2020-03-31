@@ -168,7 +168,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     console.log('Received data from backend', data)
     
   
-    
+        debugger;
     //for (var i = 0; i<data.length; i++){
         var i = 1;
         d3.select("#tableAccount").append("tr")
