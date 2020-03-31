@@ -154,12 +154,7 @@ function sparkline(elemId, data) {
 
 $( document ).ready(function() {
 
-    sparkline('#sparkline-a-cost', generateExecSparklineData(1000,2000));
-    sparkline('#sparkline-a-meetings', generateExecSparklineData(10,60));
-    sparkline('#sparkline-a-avgRating', generateExecSparklineData(1,4));
- 
 
-});
 
 
 var firstCol = "Account";
@@ -193,6 +188,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
 
 
 
+});
 
 
 
