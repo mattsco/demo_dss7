@@ -211,7 +211,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#thumbs-down-"+i).on("click", function(){
             console.log("toto");
-            d3.select("#input-"+i).attr("visibility","visible");
+            d3.select("#input-"+i).style("visibility","visible");
         });
      
     
