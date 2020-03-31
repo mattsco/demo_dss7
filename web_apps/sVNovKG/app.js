@@ -166,6 +166,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
        
     for (var i = 0; i<data.length; i++){
         //var i = 0;
+        
+        console.log(i);
         d3.select("#tableAccount").append("tr")
                                   .attr("id", "tr_"+i);
     
@@ -198,7 +200,6 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
         d3.select("#thumbs-down-"+i).on("click", function(){
-            console.log("toto");
             d3.select("#input-"+i).style("visibility","visible");
         });
      
