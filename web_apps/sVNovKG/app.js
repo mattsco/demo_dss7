@@ -157,7 +157,7 @@ $( document ).ready(function() {
     sparkline('#sparkline-a-cost', generateExecSparklineData(1000,2000));
     sparkline('#sparkline-a-meetings', generateExecSparklineData(10,60));
     sparkline('#sparkline-a-avgRating', generateExecSparklineData(1,4));
-
+    debugger; 
 
 });$.getJSON(getWebAppBackendUrl('/first_api_call'), function(data) {
     console.log('Received data from backend', data)
