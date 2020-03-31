@@ -201,7 +201,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","input_"+i)
-                           .style("visibility", "visible")
+                           .style("visibility", "hidden")
                           .html('<div class="input-group" id="form-'+i+'" ">\
             <input type="text" class="form-control" placeholder="New value..." id="val-"'+i+'">\
             <span class="input-group-btn">\
