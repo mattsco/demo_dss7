@@ -161,10 +161,13 @@ $( document ).ready(function() {
 
 });
 
+
+
 $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     console.log('Received data from backend', data)
     
     var category = data["category"];
+    debugger;
     
     for (var i = 0; category<d.length; i++){
         d3.select("#account").append("div")
