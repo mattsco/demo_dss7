@@ -206,10 +206,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             <input name="Submit"  type="submit" value="Submit" >\
             </form>');
 
-        d3.select("#form-"+i).attr("onSubmit", function(){
-            d3.select("#text-value-sparkline_"+i).text(d3.select("#val-i").value); 
-        });
-    
+      
   //  }
                          
     
