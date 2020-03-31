@@ -157,7 +157,7 @@ $( document ).ready(function() {
     sparkline('#sparkline-a-cost', generateExecSparklineData(1000,2000));
     sparkline('#sparkline-a-meetings', generateExecSparklineData(10,60));
     sparkline('#sparkline-a-avgRating', generateExecSparklineData(1,4));
-    debugger; 
+ 
 
 });
 
@@ -169,7 +169,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     for (var i = 0; category<d.length; i++){
         d3.select("#account").append("div")
                              .text(category[i]);
-        
+    }
                          
     
     const output = $('<pre />').text('Backend reply: ' + JSON.stringify(data));
