@@ -164,8 +164,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
       var d = data["data"];
        
-    //for (var i = 0; i<data.length; i++){
-        var i = 0;
+    for (var i = 0; i<data.length; i++){
+        //var i = 0;
         d3.select("#tableAccount").append("tr")
                                   .attr("id", "tr_"+i);
     
@@ -218,8 +218,10 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             d3.select("#text-value-sparkline_"+i).text(newVal); 
             d3.select("#input-"+i).style("visibility","hidden");
         });
+        
+    }
     
-  //  }
+
                          
     
  // const output = $('<pre />').text('Backend reply: ' + JSON.stringify(data));
