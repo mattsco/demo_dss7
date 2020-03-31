@@ -203,8 +203,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .attr("id","input_"+i)
                           .attr("width","20px")
                           .html('<form name="myform" id="form-'+i+'" ">\
-            <input type="text" id="val-"'+i+'">\
-            <button type="button" class="btn btn-default" id="submit-'+i+'" >Submit</button>\
+            <input type="text" class="form-control fixed_width" id="val-"'+i+'">\
+            <button type="button" class="btn btn-default fixed_width" id="submit-'+i+'" >Submit</button>\
             </form>');
 
         d3.select("#submit-"+i).on("click", function(){

@@ -15,6 +15,11 @@ color: tomato;
 cursor: pointer;
 }
 
+.fixed_width{
+    width:50px;
+    height:40px;
+}
+
 
 body{
   font-family: Helvetica;
