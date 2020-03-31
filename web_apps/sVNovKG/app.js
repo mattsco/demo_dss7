@@ -166,7 +166,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
        
     //for (var i = 0; i<d.length; i++){
         for (var i = 0; i<1; i++){
-        //var i = 0;
+        var i = 0;
         
         console.log(i);
         d3.select("#tableAccount").append("tr")
