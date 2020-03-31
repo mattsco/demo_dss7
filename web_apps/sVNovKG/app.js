@@ -197,13 +197,10 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .attr("width","5px")
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
-        d3.select("#thumbs-down-"+i).on("click", function(){
-            console.log("toto");
-            d3.select("#input_"+i).attr("visibility","visible");
-        });
+
     
         d3.select("#tr_"+i).append("td")
-                          .attr("id","input_"+i)
+                          .attr("id","input-"+i)
                            .style("visibility", "hidden")
                           .html('<div class="input-group" id="form-'+i+'" ">\
             <input type="text" class="form-control" placeholder="New value..." id="val-"'+i+'">\
@@ -212,7 +209,10 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             </span></div>');
 
     
-       
+        d3.select("#thumbs-down-"+i).on("click", function(){
+            console.log("toto");
+            d3.select("#input-"+i).attr("visibility","visible");
+        });
      
     
         d3.select("#submit-"+i).on("click", function(){
