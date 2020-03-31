@@ -175,8 +175,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     }
                          
     
-    const output = $('<pre />').text('Backend reply: ' + JSON.stringify(data));
-    $('body').append(output)
+ // const output = $('<pre />').text('Backend reply: ' + JSON.stringify(data));
+ //  $('body').append(output)->>
 });
 
 
