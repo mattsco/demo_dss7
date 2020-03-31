@@ -165,8 +165,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
       var d = data["data"];
        
     //for (var i = 0; i<d.length; i++){
-     //   for (var i = 0; i<1; i++){
-        var i = 0;
+        for (var j = 0; j<1; j++){
+        var i = j;
         
         console.log(i);
         d3.select("#tableAccount").append("tr")
@@ -223,7 +223,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             d3.select("#input-"+i).style("visibility","hidden");
         });
         
-  //  }
+    }
     
 
                          
