@@ -7,10 +7,12 @@
 
 .icon-thumbs-up-alt {
 color: green;
+ cursor: pointer;
 }
 
 .icon-thumbs-down-alt {
 color: tomato;
+ cursor: pointer;
 }
 
 
