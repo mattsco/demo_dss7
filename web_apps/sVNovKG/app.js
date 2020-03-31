@@ -197,7 +197,11 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .attr("width","5px")
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
-
+        d3.select("#thumbs-down-"+i).on("click", function(){
+            console.log("toto");
+            d3.select("#input-"+i).style("visibility","visible");
+        });
+     
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","input-"+i)
@@ -208,14 +212,11 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             <button type="button" class="btn btn-default" id="submit-'+i+'" >Submit</button>\
             </span></div>');
 
-    
-        d3.select("#thumbs-down-"+i).on("click", function(){
-            console.log("toto");
-            d3.select("#input-"+i).style("visibility","visible");
-        });
-     
+ 
     
         d3.select("#submit-"+i).on("click", function(){
+            console.log("submit");
+            console.log(d3.select("#val-"+i).value);
             d3.select("#text-value-sparkline_"+i).text(d3.select("#val-"+i).value); 
         });
     
