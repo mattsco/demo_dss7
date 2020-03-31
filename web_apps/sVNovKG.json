@@ -2,7 +2,7 @@
   "type": "STANDARD",
   "hasLegacyBackendURL": false,
   "params": {
-    "backendEnabled": false,
+    "backendEnabled": true,
     "enableJavascriptModules": false,
     "autoStartBackend": false,
     "hideJSSecurityPanel": false,
@@ -38,11 +38,11 @@
   "name": "sparkline",
   "apiKey": "A7p2QfywXK8FQg9goqnoqMyoKX05eHOO",
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585640884831
+    "lastModifiedOn": 1585640895882
   },
   "creationTag": {
     "versionNumber": 0,
