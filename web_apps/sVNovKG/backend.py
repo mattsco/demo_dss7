@@ -19,7 +19,7 @@ def init():
     
 
     # Pandas dataFrames are not directly JSON serializable, use to_json()
-    data = mydataset_df.to_json()
+    data = df.to_json()
     
     category = list(df[col_cat].values)
     return json.dumps({"status": "ok", "data": data, "category":category})
