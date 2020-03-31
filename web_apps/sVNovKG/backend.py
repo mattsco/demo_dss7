@@ -18,7 +18,7 @@ def get_sparkline(df):
     out = zip(d,s)
     r = []
     for d0,v0 in out:
-        r.append({"date":d0, "value":v0})
+        r.append({"date":d0, "value":round(v0,2)})
     return r
 
 df["spark"] = df.apply(get_sparkline, axis=1)
