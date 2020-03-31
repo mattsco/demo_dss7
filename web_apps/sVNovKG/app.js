@@ -207,7 +207,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .attr("id","input-"+i)
                            .style("visibility", "hidden")
                           .html('<div class="input-group" id="form-'+i+'" ">\
-            <input type="text" class="form-control" placeholder="New value..." id="val-"'+i+'">\
+            <input type="text" class="form-control" placeholder="New value..." id="val-'+i+'">\
             <span class="input-group-btn">\
             <button type="button" class="btn btn-default" id="submit-'+i+'" >Submit</button>\
             </span></div>');
@@ -217,7 +217,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
         d3.select("#submit-"+i).on("click", function(){
             console.log("submit");
             debugger;
-            console.log(d3.select("#val-"+i).value);
+            console.log(d3.select("#val-"+i).text());
             d3.select("#text-value-sparkline_"+i).text(d3.select("#val-"+i).value); 
         });
     
