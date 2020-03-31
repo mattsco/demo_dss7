@@ -183,7 +183,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","feedback_good_"+i)
-                          .attr("style","width=10px")
+                          .attr("style","width=5px")
                           .html('<i class="icon-thumbs-up-alt" id="thumbs-up-'+i+'"></i>');
     
         d3.select("#thumbs-up-"+i).on("click", function(){
@@ -192,7 +192,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","feedback_bad_"+i)
-                          .attr("style","width=10px")
+                          .attr("style","width=5px")
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
         d3.select("#thumbs-down-"+i).on("click", function(){
