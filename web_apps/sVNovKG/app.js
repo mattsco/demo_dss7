@@ -184,9 +184,9 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
         d3.select("#tr_"+i).append("td")
                           .attr("id","feedback_good_"+i)
                           .html('<i class="icon-thumbs-up-alt"></i>')
-                          .on("mouseover", function(){
-            d3.select(".icon-thumbs-up-alt").style("font-size: 48px;")
-        }) ;
+                          .on("click", function(){
+            d3.select("text-value-sparkline_"+i).style("font-color: green;")
+        });
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","feedback_bad_"+i)
