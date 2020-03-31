@@ -201,11 +201,15 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","input_"+i)
-                          .html('<form name="myform" onSubmit="return handleClick()">\
-            <input name="Submit"  type="submit" value="Add to list" >\
-            <input type="text" id="myVal" placeholder="Add some text&hellip;">\
-        </form>');
+                          .html('<form name="myform" id="form-'+i+'" onSubmit="return handleClick()">\
+            <input type="text" id="val-"'+i+'" placeholder="Add some text&hellip;">\
+            <input name="Submit"  type="submit" value="Submit" >\
+            </form>');
 
+        d3.select("#form-"+i).attr("onSubmit", function(){
+            d3.select("#text-value-sparkline_"+i).text(d3.select("#val-i").value); 
+        });
+    
   //  }
                          
     
