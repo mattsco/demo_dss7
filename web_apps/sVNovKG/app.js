@@ -191,6 +191,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-up-alt" id="thumbs-up-'+i+'"></i>');
     
         d3.select("#thumbs-up-"+i).on("click", function(){
+            console.log("thumbs-up");
             d3.select("#text-value-sparkline_"+i).attr("style","color: green;")
         });
     
@@ -200,6 +201,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
         d3.select("#thumbs-down-"+i).on("click", function(){
+            console.log("thumbs-down");
             d3.select("#input-"+i).style("visibility","visible");
         });
      
