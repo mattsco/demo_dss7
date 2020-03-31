@@ -146,9 +146,9 @@ function sparkline(elemId, data) {
       .style("opacity","0")
       .text(prettyPrint(elemId,getSummation()));
 
-  d3.select(elemId)
-    .attr("data-flipped",false)
-    .on("click",clickEventHandler);
+ // d3.select(elemId)
+   // .attr("data-flipped",false)
+    //.on("click",clickEventHandler);
 
 }
 
