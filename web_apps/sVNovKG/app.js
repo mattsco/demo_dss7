@@ -158,11 +158,5 @@ $( document ).ready(function() {
     sparkline('#sparkline-a-meetings', generateExecSparklineData(10,60));
     sparkline('#sparkline-a-avgRating', generateExecSparklineData(1,4));
 
-    sparkline('#sparkline-b-cost', generateExecSparklineData(1000,2000));
-    sparkline('#sparkline-b-meetings', generateExecSparklineData(10,60));
-    sparkline('#sparkline-b-avgRating', generateExecSparklineData(1,4));
 
-    sparkline('#sparkline-c-cost', generateExecSparklineData(10000,20000));
-    sparkline('#sparkline-c-meetings', generateExecSparklineData(100,600));
-    sparkline('#sparkline-c-avgRating', generateExecSparklineData(1,3));
 });
