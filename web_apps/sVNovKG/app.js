@@ -180,6 +180,14 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .attr("id","sparkline_"+i);
             
         sparkline('#sparkline_'+i, d[i]["spark"]);
+    
+        d3.select("#tr_"+i).append("td")
+                          .attr("id","feedback_good_"+i)
+                          .innerHTML('<i class="icon-thumbs-up-alt"></i>');
+    
+        d3.select("#tr_"+i).append("td")
+                          .attr("id","feedback_bad_"+i)
+                          .innerHTML('<i class="icon-thumbs-down-alt"></i>');
   //  }
                          
     
