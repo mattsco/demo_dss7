@@ -220,7 +220,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             console.log("B", d3.select("#val-"+i).node().value);
             //console.log(document.getElementById("#val-"+i).value);
             debugger;
-            d3.select("#text-value-sparkline_"+i).text(d3.select("#val-"+i).value); 
+            var newVal = d3.select("#val-"+i).property("value");
+            d3.select("#text-value-sparkline_"+i).text(newVal); 
         });
     
   //  }
