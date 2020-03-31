@@ -191,6 +191,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","feedback_bad_"+i)
+                          .attr("style","width=10px")
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
         d3.select("#thumbs-down-"+i).on("click", function(){
