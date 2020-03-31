@@ -212,16 +212,11 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             <button type="button" class="btn btn-default" id="submit-'+i+'" >Submit</button>\
             </span></div>');
 
- 
-    
+   
         d3.select("#submit-"+i).on("click", function(){
-            console.log("submit");
-            console.log("A",d3.select("#val-"+i).property("value"));
-            console.log("B", d3.select("#val-"+i).node().value);
-            //console.log(document.getElementById("#val-"+i).value);
-            debugger;
             var newVal = d3.select("#val-"+i).property("value");
             d3.select("#text-value-sparkline_"+i).text(newVal); 
+            d3.select("#input-"+i).style("visibility","hidden");
         });
     
   //  }
