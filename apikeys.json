@@ -1,0 +1,24 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false
+    },
+    "onBehalf": "sVNovKG",
+    "id": "69Q3FrUpCPNXEBgz",
+    "key": "A7p2QfywXK8FQg9goqnoqMyoKX05eHOO",
+    "label": "Key for Web app sparkline(sVNovKG)",
+    "createdOn": 1585640718580
+  }
+]
