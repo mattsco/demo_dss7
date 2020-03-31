@@ -11,15 +11,18 @@ col_pred = "model_prediction"
 col_split = "Aggregation"
 col_cat = "Account"
 
+def get_sparkline(df):
+    s = list(df[col_sparkline].values)[::-1]
+    s.append(df[col_pred])
+    return s
 
+df["spark"] = df.apply(get_sparkline, axis=1)
+for i in col_sparkline:
+    del df[i]
+    
 @app.route('/init')
 def init():
 
-    df = dataiku.Dataset(dataset_name).get_dataframe()
-    
-
-    # Pandas dataFrames are not directly JSON serializable, use to_json()
     data = df.to_json()
     
-    category = list(df[col_cat].values)
-    return json.dumps({"status": "ok", "data": data, "category":category})
+    return json.dumps({"status": "ok", "data": data})
