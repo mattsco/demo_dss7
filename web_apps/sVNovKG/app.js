@@ -201,7 +201,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","input_"+i)
-                         
+                           .style("visibility", "visible")
                           .html('<div class="input-group" id="form-'+i+'" ">\
             <input type="text" class="form-control" placeholder="New value..." id="val-"'+i+'">\
             <span class="input-group-btn">\
@@ -210,8 +210,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
 
     
        
-      
-    
+     
     
         d3.select("#submit-"+i).on("click", function(){
             d3.select("#text-value-sparkline_"+i).text(d3.select("#val-"+i).value); 
