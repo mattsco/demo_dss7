@@ -159,8 +159,34 @@ $( document ).ready(function() {
     sparkline('#sparkline-a-avgRating', generateExecSparklineData(1,4));
     debugger; 
 
-});$.getJSON(getWebAppBackendUrl('/first_api_call'), function(data) {
+});
+
+$.getJSON(getWebAppBackendUrl('/init'), function(data) {
     console.log('Received data from backend', data)
+    
+    var category = data["category"];
+    
+    for (var i = 0; category<d.length; i++){
+        d3.select("#account").append("div")
+                             .text(category[i]);
+        
+                         
+    
     const output = $('<pre />').text('Backend reply: ' + JSON.stringify(data));
     $('body').append(output)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
