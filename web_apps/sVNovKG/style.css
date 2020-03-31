@@ -5,6 +5,15 @@
 */
 @import '/static/public/styles/1.0.0/variables.css';
 
+.icon-thumbs-up-alt {
+color: green;
+}
+
+.icon-thumbs-down-alt {
+color: tomato;
+}
+
+
 body{
   font-family: Helvetica;
 }
