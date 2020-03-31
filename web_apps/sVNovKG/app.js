@@ -201,12 +201,18 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","input_"+i)
-                          
-                          .html('<form name="myform" id="form-'+i+'" ">\
-            <input type="text" class="form-control fixed_width" id="val-"'+i+'">\
+                          .attr("width","20px")
+                          .html('<div class="input-group" id="form-'+i+'" ">\
+            <input type="text" class="form-control fixed_width" placeholder="New value..." id="val-"'+i+'">\
+            <span class="input-group-btn">\
             <button type="button" class="btn btn-default fixed_width" id="submit-'+i+'" >Submit</button>\
-            </form>');
+            </span></div>');
 
+    
+       
+      
+    
+    
         d3.select("#submit-"+i).on("click", function(){
             d3.select("#text-value-sparkline_"+i).text(d3.select("#val-"+i).value); 
         });
