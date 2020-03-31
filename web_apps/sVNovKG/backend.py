@@ -23,6 +23,6 @@ for i in col_sparkline:
 @app.route('/init')
 def init():
 
-    data = df.to_json()
-    
+
+    data= df.to_dict(orient="records")
     return json.dumps({"status": "ok", "data": data})
