@@ -178,8 +178,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","sparkline_"+i);
-    
-        sparkline('#sparkline_'+i, data[i]["spark"]);
+            
+        sparkline('#sparkline_'+i, d[i]["spark"]);
   //  }
                          
     
