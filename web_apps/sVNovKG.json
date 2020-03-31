@@ -39,11 +39,11 @@
   "name": "sparkline",
   "apiKey": "A7p2QfywXK8FQg9goqnoqMyoKX05eHOO",
   "versionTag": {
-    "versionNumber": 110,
+    "versionNumber": 111,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585670489651
+    "lastModifiedOn": 1585670504986
   },
   "creationTag": {
     "versionNumber": 0,
