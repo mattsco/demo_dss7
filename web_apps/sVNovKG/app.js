@@ -202,7 +202,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
         d3.select("#tr_"+i).append("td")
                           .attr("id","input_"+i)
                           .html('<form name="myform" id="form-'+i+'" ">\
-            <input type="text" id="val-"'+i+'" placeholder="add a new prediction...">\
+            <input type="text" id="val-"'+i+'">\
             <button type="button" class="btn btn-default" id="submit-'+i+'" >Submit</button>\
             </form>');
 
