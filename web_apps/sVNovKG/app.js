@@ -199,8 +199,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","input_"+i)
-                          .html(\
-        '<form name="myform" onSubmit="return handleClick()">\
+                          .html('<form name="myform" onSubmit="return handleClick()">\
             <input name="Submit"  type="submit" value="Add to list" >\
             <input type="text" id="myVal" placeholder="Add some text&hellip;">\
         </form>');
