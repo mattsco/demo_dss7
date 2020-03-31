@@ -193,6 +193,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#thumbs-up-"+i).on("click", function(){
             console.log("thumbs-up",i,j);
+            debugger;
             d3.select("#text-value-sparkline_"+i).attr("style","color: green;")
         });
     
@@ -203,6 +204,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#thumbs-down-"+i).on("click", function(){
             console.log("thumbs-down",i,j);
+            debugger;
             d3.select("#input-"+i).style("visibility","visible");
         });
      
@@ -218,6 +220,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
 
    
         d3.select("#submit-"+i).on("click", function(){
+            debugger;
+            
             var newVal = d3.select("#val-"+i).property("value");
             d3.select("#text-value-sparkline_"+i).text(newVal); 
             d3.select("#input-"+i).style("visibility","hidden");
