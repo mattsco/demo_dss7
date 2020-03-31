@@ -198,7 +198,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
         d3.select("#thumbs-down-"+i).on("click", function(){
-            d3.select("#text-value-sparkline_"+i).attr("style","color: green;")
+            d3.select("#input_"+i).attr("visibility","visible");
         });
     
         d3.select("#tr_"+i).append("td")
