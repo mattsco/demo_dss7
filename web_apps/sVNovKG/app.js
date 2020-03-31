@@ -169,7 +169,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     var category = data["category"];
     debugger;
     
-    for (var i = 0; category<d.length; i++){
+    for (var i = 0; i<category.length; i++){
         d3.select("#account").append("div")
                              .text(category[i]);
     }
