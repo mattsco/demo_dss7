@@ -1,0 +1,31 @@
+{
+  "type": "web_app",
+  "params": {
+    "webAppSmartId": "sVNovKG",
+    "webAppType": "STANDARD",
+    "apiKey": "A7p2QfywXK8FQg9goqnoqMyoKX05eHOO"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "sparkline",
+  "dashboardCreationId": "OzjVNjM",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1585671027949
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1585671027949
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
