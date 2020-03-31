@@ -162,17 +162,29 @@ $( document ).ready(function() {
 });
 
 
+var firstCol = "Account";
 
 $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     console.log('Received data from backend', data)
     
-    var category = data["category"];
-    debugger;
+  
     
-    for (var i = 0; i<category.length; i++){
-        d3.select("#account").append("div")
-                             .text(category[i]);
-    }
+    //for (var i = 0; i<data.length; i++){
+        var i = 1;
+        d3.select("#tableAccount").append("tr")
+                                  .attr("id", "tr_"+i);
+        d3.select("#tr"+i).append("th")
+                          .attr("scope","row")
+                          .text(i);
+    
+        d3.select("#tr"+i).append("td")
+                          .text(data[i][firstCol]);
+    
+        d3.select("#tr"+i).append("td")
+                          .attr("id","sparkline_"+i);
+    
+        sparkline('#sparkline_'+i, data[i]["spark"]);
+  //  }
                          
     
  // const output = $('<pre />').text('Backend reply: ' + JSON.stringify(data));
