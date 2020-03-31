@@ -1,12 +1,47 @@
 {
   "inputDatasetSmartName": "SCB",
   "script": {
-    "steps": [],
+    "steps": [
+      {
+        "type": "RemoveRowsOnEmpty",
+        "params": {
+          "keep": false,
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "Account"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
       "mode": "ALL"
     },
-    "columnWidthsByName": {},
+    "columnWidthsByName": {
+      "Account": 211,
+      "Aggregation": 134,
+      "model_prediction": 162,
+      "budget": 141,
+      "6_month_avg": 141,
+      "3_month_avg": 141,
+      "previous_fy": 141,
+      "t_minus_1": 100,
+      "t_minus_2": 148,
+      "t_minus_3": 141,
+      "t_minus_4": 141,
+      "t_minus_5": 148,
+      "t_minus_6": 148,
+      "t_minus_7": 148,
+      "t_minus_8": 141,
+      "t_minus_9": 141,
+      "t_minus_10": 141,
+      "t_minus_11": 148,
+      "t_minus_12": 141
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
@@ -40,7 +75,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
@@ -48,11 +85,11 @@
   "charts": [],
   "name": "Analyze SCB",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585625206643
+    "lastModifiedOn": 1585625210697
   },
   "creationTag": {
     "versionNumber": 0,
