@@ -186,13 +186,25 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-up-alt" id="thumbs-up-'+i+'"></i>');
     
         d3.select("#thumbs-up-"+i).on("click", function(){
-            debugger;
             d3.select("#text-value-sparkline_"+i).attr("style","color: green;")
         });
     
         d3.select("#tr_"+i).append("td")
                           .attr("id","feedback_bad_"+i)
-                          .html('<i class="icon-thumbs-down-alt"></i>');
+                          .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
+    
+        d3.select("#thumbs-down-"+i).on("click", function(){
+            d3.select("#text-value-sparkline_"+i).attr("style","color: green;")
+        });
+    
+        d3.select("#tr_"+i).append("td")
+                          .attr("id","input_"+i)
+                          .html(\
+        '<form name="myform" onSubmit="return handleClick()">\
+            <input name="Submit"  type="submit" value="Add to list" >\
+            <input type="text" id="myVal" placeholder="Add some text&hellip;">\
+        </form>');
+
   //  }
                          
     
