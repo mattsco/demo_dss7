@@ -167,10 +167,10 @@ var firstCol = "Account";
 $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     console.log('Received data from backend', data)
     
-  
-        debugger;
+      var d = data["data"];
+       
     //for (var i = 0; i<data.length; i++){
-        var i = 1;
+        var i = 0;
         d3.select("#tableAccount").append("tr")
                                   .attr("id", "tr_"+i);
         d3.select("#tr"+i).append("th")
@@ -178,7 +178,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .text(i);
     
         d3.select("#tr"+i).append("td")
-                          .text(data[i][firstCol]);
+                          .text(d[i][firstCol]);
     
         d3.select("#tr"+i).append("td")
                           .attr("id","sparkline_"+i);
