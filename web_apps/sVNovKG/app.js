@@ -207,7 +207,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .attr("id","input-"+i)
                            .style("visibility", "hidden")
                           .html('<div class="input-group" id="form-'+i+'" ">\
-            <input type="text" class="form-control" placeholder="New value..." id="val-'+i+'">\
+            <input type="text" class="form-control" placeholder="New value..." value="0" id="val-'+i+'">\
             <span class="input-group-btn">\
             <button type="button" class="btn btn-default" id="submit-'+i+'" >Submit</button>\
             </span></div>');
