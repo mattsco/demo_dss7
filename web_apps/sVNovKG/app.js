@@ -192,9 +192,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-up-alt" id="thumbs-up-'+i+'"></i>');
     
         d3.select("#thumbs-up-"+i).on("click", function(){
-            console.log("thumbs-up",i,j);
-            debugger;
-            d3.select("#text-value-sparkline_"+i).attr("style","color: green;")
+            console.log("thumbs-up");
+            d3.select("#text-value-sparkline_"+this.id.slice(-1)).attr("style","color: green;")
         });
     
         d3.select("#tr_"+i).append("td")
@@ -203,9 +202,9 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-down-alt" id="thumbs-down-'+i+'"></i>');
     
         d3.select("#thumbs-down-"+i).on("click", function(){
-            console.log("thumbs-down",i,j);
-            debugger;
-            d3.select("#input-"+i).style("visibility","visible");
+            console.log("thumbs-down");
+            
+            d3.select("#input-"+this.id.slice(-1)).style("visibility","visible");
         });
      
     
@@ -220,11 +219,10 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
 
    
         d3.select("#submit-"+i).on("click", function(){
-            debugger;
-            
-            var newVal = d3.select("#val-"+i).property("value");
-            d3.select("#text-value-sparkline_"+i).text(newVal); 
-            d3.select("#input-"+i).style("visibility","hidden");
+
+            var newVal = d3.select("#val-"+this.id.slice(-1)).property("value");
+            d3.select("#text-value-sparkline_"+this.id.slice(-1)).text(newVal); 
+            d3.select("#input-"+this.id.slice(-1)).style("visibility","hidden");
         });
         
     }
