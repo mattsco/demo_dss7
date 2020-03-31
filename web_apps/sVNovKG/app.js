@@ -164,7 +164,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
       var d = data["data"];
        
-    for (var i = 0; i<data.length; i++){
+    for (var i = 0; i<d.length; i++){
         //var i = 0;
         
         console.log(i);
