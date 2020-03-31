@@ -186,6 +186,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .html('<i class="icon-thumbs-up-alt" id="thumbs-up-'+i+'"></i>');
     
         d3.select("#thumbs-up-"+i).on("click", function(){
+            debugger;
             d3.select("text-value-sparkline_"+i).style("font-color: green;")
         });
     
