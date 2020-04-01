@@ -262,7 +262,7 @@ d3.select("#save-button").on("click", function(){
     }
     console.log(all_values);
     
-    $.post( "/save", {
+    $.post( getWebAppBackendUrl('/save'), {
         data: all_values 
     });
     
