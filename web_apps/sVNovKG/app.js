@@ -262,26 +262,10 @@ d3.select("#save-button").on("click", function(){
     }
     console.log(all_values);
     
-
-    $.ajax({
-        type: 'post',
-        url: getWebAppBackendUrl('/save'),
-        processData: false,
-        contentType: false,
-        data: all_values,
-        success: function (data) {
-            console.log("success");
-        },
-        error: function (jqXHR, status, errorThrown) {
-             console.log("error");
-        },
-        xhr: function() {
-             console.log("xhr");
-        },
-        complete: function() {
-            console.log("done");
-        }
+    $.post( "/save", {
+        data: all_values 
     });
+    
 })
 
 

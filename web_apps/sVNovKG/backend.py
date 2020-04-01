@@ -41,9 +41,9 @@ def init():
 
 @app.route('/save', methods=['POST'])
 def save():
-    if request.method == 'POST':  #this block is only entered when the form is submitted
-        data = request.form.get('extra', '')
-    print data
+    jsdata = request.form['data']
+
+    print jsdata
     
 
     return json.dumps({"status": "ok", "data": 0})
