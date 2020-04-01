@@ -261,6 +261,27 @@ d3.select("#save-button").on("click", function(){
         all_values.push([account_vals[i].textContent, spark_vals[i].textContent]);
     }
     console.log(all_values);
+    
+
+    $.ajax({
+        type: 'post',
+        url: getWebAppBackendUrl('/save'),
+        processData: false,
+        contentType: false,
+        data: all_values,
+        success: function (data) {
+            showResult(data, true);
+        },
+        error: function (jqXHR, status, errorThrown) {
+            showResult(jqXHR.responseText, false);
+        },
+        xhr: function() {
+             console.log("xhr");
+        },
+        complete: function() {
+            console.log("done");
+        }
+    });
 })
 
 
