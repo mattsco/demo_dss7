@@ -212,7 +212,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
         var col_id = list_button[c]+"-"+i;
         d3.select("#tr_"+i).append("td")
                            .attr("id","td-"+col_id)
-                           .html('<button type="button" class="btn btn-default btn-xs" id=""button-'+col_id+'" >'+list_button[c]+'</button>');
+                           .html('<button type="button" class="btn btn-default btn-xs" id=""button-'+col_id+'" >'+d[i][list_button[c]]+'</button>');
     }
         
             
