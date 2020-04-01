@@ -180,7 +180,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .text(d[i][firstCol]);
     
         d3.select("#tr_"+i).append("td")
-                          .attr("width","200px")
+                          .attr("width","100px")
                           .style("padding-right", "50px")
                           .attr("id","sparkline_"+i);
             
