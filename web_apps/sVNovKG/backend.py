@@ -41,9 +41,9 @@ def init():
 
 @app.route('/save', methods=['POST'])
 def save():
-    jsdata = request.form['data']
+    req = json.loads(request.get_data())
 
-    print jsdata
+    print req
     
 
     return json.dumps({"status": "ok", "data": 0})

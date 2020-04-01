@@ -262,19 +262,11 @@ d3.select("#save-button").on("click", function(){
     }
     console.log(all_values);
     
-    $.post( getWebAppBackendUrl('/save'), {
-        data: all_values 
-    });
+$.post(getWebAppBackendUrl('save'),JSON.stringify({'param': all_values}),function(data){ console.log('houdy rocks!') })
     
 })
 
 
 
-
-
-
-
-
-
-
-
+ 
+});
