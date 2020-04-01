@@ -22,9 +22,9 @@ cursor: pointer;
 
 #button-save{
     position: relative;
-    left: 500px;
-    top: 10px;
-    bottom: 10px;
+    left: 800px;
+    top: 5px;
+    margin-bottom: 50px;
     
 }
 
