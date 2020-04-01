@@ -194,7 +194,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#thumbs-up-"+i).on("click", function(){
             console.log("thumbs-up");
-            d3.select("#text-value-sparkline_"+this.id.slice(-1)).attr("style","color: green;")
+            var n = this.id.split("-");
+            d3.select("#text-value-sparkline_"+n[n.length-1]).attr("style","color: green;")
         });
     
         d3.select("#tr_"+i).append("td")
@@ -204,8 +205,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
     
         d3.select("#thumbs-down-"+i).on("click", function(){
             console.log("thumbs-down");
-            
-            d3.select("#input-"+this.id.slice(-1)).style("visibility","visible");
+            var n = this.id.split("-");
+            d3.select("#input-"+n[n.length-1]).style("visibility","visible");
         });
     
     var list_button = data["col_choice"];
@@ -216,7 +217,8 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                            .html('<button type="button" class="btn btn-default btn-sm" id="button-'+col_id+'" >'+d[i][list_button[c]]+'</button>');
         
      d3.select("#button-"+col_id).on("click", function(){
-            d3.select("#text-value-sparkline_"+this.id.slice(-1)).text(this.textContent);
+            var n = this.id.split("-");
+            d3.select("#text-value-sparkline_"+n[n.length-1]).text(this.textContent);
         });
         
     }
@@ -233,10 +235,10 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
 
    
         d3.select("#submit-"+i).on("click", function(){
-
-            var newVal = d3.select("#val-"+this.id.slice(-1)).property("value");
-            d3.select("#text-value-sparkline_"+this.id.slice(-1)).text(newVal); 
-            d3.select("#input-"+this.id.slice(-1)).style("visibility","hidden");
+            var n = this.id.split("-");
+            var newVal = d3.select("#val-"+n[n.length-1]).property("value");
+            d3.select("#text-value-sparkline_"+n[n.length-1]).text(newVal); 
+            d3.select("#input-"+n[n.length-1]).style("visibility","hidden");
         });
         
     }
