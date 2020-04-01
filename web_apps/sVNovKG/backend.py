@@ -32,4 +32,4 @@ def init():
 
 
     data= df.to_dict(orient="records")
-    return json.dumps({"status": "ok", "data": data})
+    return json.dumps({"status": "ok", "data": data, "col_choice":col_choice})

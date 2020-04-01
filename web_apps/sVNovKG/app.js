@@ -206,11 +206,19 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
             
             d3.select("#input-"+this.id.slice(-1)).style("visibility","visible");
         });
-     
     
+    var list_button = data["col_choice"];
+    for (var c = 0; c<list_button.length; c++){
+        var col_id = list_button[c]+"-"+i;
+        d3.select("#tr_"+i).append("td")
+                           .attr("id","td-"+col_id)
+                           .html('<button type="button" class="btn btn-default" id=""button-'+col_id+'" >'+list_button[c]+'</button>');
+    }
+        
+            
         d3.select("#tr_"+i).append("td")
                           .attr("id","input-"+i)
-                           .style("visibility", "hidden")
+                          .style("visibility", "hidden")
                           .html('<div class="input-group" id="form-'+i+'" ">\
             <input type="text" class="form-control" placeholder="New value..." id="val-'+i+'">\
             <span class="input-group-btn">\
