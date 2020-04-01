@@ -1,4 +1,4 @@
-var animDuration = 5000;
+var animDuration = 2000;
 
 //http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
 function getRandomInt(min, max) {
