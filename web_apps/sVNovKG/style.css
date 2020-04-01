@@ -20,7 +20,7 @@ cursor: pointer;
     height:40px;
 }
 
-#button-save{
+#save-button{
     position: relative;
     left: 700px;
     top: 5px;
