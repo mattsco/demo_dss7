@@ -4,12 +4,17 @@ from flask import request
 
 
 dataset_name = "SCB_prep"
+folder_id = "BaT52kVZ"
+
 df = dataiku.Dataset(dataset_name).get_dataframe()
 col_sparkline = [i for i in df.columns if i.startswith("t_m")]
 col_choice = ["6_month_avg","3_month_avg","previous_fy"]
 col_pred = "model_prediction"
 col_split = "Aggregation"
 col_cat = "Account"
+
+path = dataiku.Folder(folder_id).get_info()["path"]
+
 
 def get_sparkline(df):
     s = list(df[col_sparkline].values)[::-1]
@@ -27,9 +32,20 @@ df["spark"] = df.apply(get_sparkline, axis=1)
 for i in col_sparkline:
     del df[i]
     
+    
 @app.route('/init')
 def init():
-
-
     data= df.to_dict(orient="records")
     return json.dumps({"status": "ok", "data": data, "col_choice":col_choice})
+
+
+@app.route('/save', methods=['POST'])
+def save():
+    if request.method == 'POST':  #this block is only entered when the form is submitted
+        data = request.form.get('extra', '')
+    print data
+    
+
+    return json.dumps({"status": "ok", "data": 0})
+
+
