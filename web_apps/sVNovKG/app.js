@@ -58,9 +58,7 @@ function sparkline(elemId, data) {
     var isFlipped = element.getAttribute("data-flipped");
     console.log(element);
       if(!(elemId.indexOf("avgRating") > -1)){
-          //edit to add class
-        d3.select("#text-value-"+elemId.replace("#","")).attr("class", "pred-value");
-          
+
         if(isFlipped === "false"){
           d3.select("#"+"current-path-"+elemId.replace("#","")).transition().duration(animDuration/1.5).style("opacity",0)
           d3.select("#this-spark-circle-"+elemId.replace("#","")).transition().duration(animDuration/1.5).style("opacity",0);
@@ -253,8 +251,12 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
 
 
 d3.select("#save-button").on("click", function(){
-
-    
+    var all_values = [];
+    var spark_vals = d3.selectAll(".text-value")[0];
+    for (var i = 0; i<spark_vals.length; i++){
+    all_values.append(spark_vals[i].textContent);
+    }
+    console.log(all_values);
 })
 
 
