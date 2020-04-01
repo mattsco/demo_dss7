@@ -213,6 +213,15 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
         d3.select("#tr_"+i).append("td")
                            .attr("id","td-"+col_id)
                            .html('<button type="button" class="btn btn-default btn-sm" id=""button-'+col_id+'" >'+d[i][list_button[c]]+'</button>');
+        
+     d3.select("#button-"+col_id).on("click", function(){
+            debugger;
+         
+            var newVal = d3.select("#val-"+this.id.slice(-1)).property("value");
+            d3.select("#text-value-sparkline_"+this.id.slice(-1)).text(newVal); 
+            d3.select("#input-"+this.id.slice(-1)).style("visibility","hidden");
+        });
+        
     }
         
             
