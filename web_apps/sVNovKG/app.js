@@ -114,20 +114,7 @@ function sparkline(elemId, data) {
      .attr('cx', x(data[data.length-1].date))
      .attr('cy', y(data[data.length-1].value))
      .style("opacity",1)
-     .attr('r', 2)
-           .on("mouseover", function(d) {	
-              tooltip.transition()		
-                  .duration(200)		
-                  .style("opacity", .9);		
-              tooltip.html("hi " + "<br/>" )	
-                  .style("left", (d3.event.pageX) + "px")		
-                  .style("top", (d3.event.pageY - 28) + "px");	
-              })					
-          .on("mouseout", function(d) {		
-              tooltip.transition()		
-                  .duration(500)		
-                  .style("opacity", 0);	
-          });  
+     .attr('r', 2);  
 
   var totalLength = d3.select("#current-path-"+elemId.replace("#","")).node().getTotalLength();
 
