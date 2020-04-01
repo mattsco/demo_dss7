@@ -255,8 +255,10 @@ d3.select("#save-button").on("click", function(){
     console.log("save");
     var all_values = [];
     var spark_vals = d3.selectAll(".text-value")[0];
+    var account_vals = d3.selectAll(".Account")[0];
+    
     for (var i = 0; i<spark_vals.length; i++){
-        all_values.push(spark_vals[i].textContent);
+        all_values.push([account_vals[i].textContent, spark_vals[i].textContent]);
     }
     console.log(all_values);
 })
