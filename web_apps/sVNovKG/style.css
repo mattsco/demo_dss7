@@ -23,7 +23,8 @@ cursor: pointer;
 #button-save{
     position: relative;
     left: 500px;
-    top: 5px;
+    top: 50px;
+    
 }
 
 body{
