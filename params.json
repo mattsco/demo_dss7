@@ -124,6 +124,8 @@
   },
   "name": "icar",
   "projectStatus": "Sandbox",
+  "imgPattern": 4,
+  "showInitials": false,
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -179,11 +181,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585671027729
+    "lastModifiedOn": 1585716413814
   },
   "creationTag": {
     "versionNumber": 0,
