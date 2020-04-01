@@ -253,7 +253,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
 d3.select("#save-button").on("click", function(){
 
     
-}
+})
 
 
 
