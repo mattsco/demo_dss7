@@ -58,7 +58,9 @@ function sparkline(elemId, data) {
     var isFlipped = element.getAttribute("data-flipped");
     console.log(element);
       if(!(elemId.indexOf("avgRating") > -1)){
-
+          //edit to add class
+        d3.select("#text-value-"+elemId.replace("#","")).attr("class", "pred-value");
+          
         if(isFlipped === "false"){
           d3.select("#"+"current-path-"+elemId.replace("#","")).transition().duration(animDuration/1.5).style("opacity",0)
           d3.select("#this-spark-circle-"+elemId.replace("#","")).transition().duration(animDuration/1.5).style("opacity",0);
