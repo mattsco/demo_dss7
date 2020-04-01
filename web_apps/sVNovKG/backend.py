@@ -1,7 +1,8 @@
 import dataiku
 import pandas as pd
 from flask import request
-
+import datetime
+import os
 
 dataset_name = "SCB_prep"
 folder_id = "BaT52kVZ"
@@ -41,11 +42,25 @@ def init():
 
 @app.route('/save', methods=['POST'])
 def save():
-    req = json.loads(request.get_data())
+    param = json.loads(request.get_data())
 
-    print req
+    out = pd.DataFrame(param["param"], columns=["accounts", "prediction"])
+    out["timestamp"] = datetime.datetime.now()
+    out.head()
+
+    date = str(datetime.datetime.now()).split()[0]
+    path0 = path+"/"+date
+
+    try:
+        os.mkdir(path0)
+    except OSError:
+        print ("Creation of the directory %s failed" % path)
+    else:
+        print ("Successfully created the directory %s " % path)
+
+    h = str(hash(str(param)))[-5::]
+    out.to_csv(path0+"/"+h+".csv", index=False)
     
-
     return json.dumps({"status": "ok", "data": 0})
 
 
