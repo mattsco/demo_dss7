@@ -177,7 +177,7 @@ $.getJSON(getWebAppBackendUrl('/init'), function(data) {
                           .text(i);
          
         d3.select("#tr_"+i).append("td")
-                          .class(firstCol)
+                          .attr("class",firstCol)
                           .text(d[i][firstCol]);
     
         d3.select("#tr_"+i).append("td")
