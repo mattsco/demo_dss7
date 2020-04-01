@@ -264,9 +264,8 @@ d3.select("#save-button").on("click", function(){
     
 $.post(getWebAppBackendUrl('save'),JSON.stringify({'param': all_values}),function(data){ console.log('houdy rocks!') })
     
-})
+});
 
 
 
  
-});
