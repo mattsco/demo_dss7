@@ -21,7 +21,7 @@ cursor: pointer;
 }
 
 #button-save{
-    position: absolute;
+    position: relative;
     right: 10px;
     top: 5px;
 }
