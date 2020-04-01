@@ -113,7 +113,7 @@ function sparkline(elemId, data) {
      .attr("id","this-spark-circle-"+elemId.replace("#",""))
      .attr('cx', x(data[data.length-1].date))
      .attr('cy', y(data[data.length-1].value))
-     .style("opacity",1)
+     .style("opacity",0)
      .attr('r', 2);  
 
   var totalLength = d3.select("#current-path-"+elemId.replace("#","")).node().getTotalLength();
