@@ -20,6 +20,9 @@ cursor: pointer;
     height:40px;
 }
 
+#button-save{
+    text-align:center;
+}
 
 body{
   font-family: Helvetica;
