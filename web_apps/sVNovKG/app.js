@@ -270,10 +270,10 @@ d3.select("#save-button").on("click", function(){
         contentType: false,
         data: all_values,
         success: function (data) {
-            showResult(data, true);
+            console.log("success");
         },
         error: function (jqXHR, status, errorThrown) {
-            showResult(jqXHR.responseText, false);
+             console.log("error");
         },
         xhr: function() {
              console.log("xhr");
